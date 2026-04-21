@@ -45,9 +45,23 @@
     .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
     section { padding: 100px 0; border-bottom: 1px solid var(--border-color); }
     
-    /* --- NAVIGATION --- */
+    /* --- NAVIGATION & LOGO (PULLED FROM APP) --- */
     nav { display: flex; justify-content: space-between; align-items: center; padding: 30px 20px; max-width: 1200px; margin: 0 auto; }
-    .logo { display: flex; align-items: center; text-decoration: none; }
+    
+    .logo-badge { 
+      background-color: var(--bg-card); 
+      padding: 10px 16px; 
+      border-radius: 8px; 
+      border: 1px solid var(--border-color); 
+      text-decoration: none; 
+      display: flex; 
+      align-items: center; 
+      transition: border-color 0.2s, transform 0.2s; 
+    }
+    .logo-badge:hover { border-color: var(--accent); transform: translateY(-1px); }
+    .logo-text { font-size: 22px; font-weight: 900; letter-spacing: -1px; color: var(--text-main); margin: 0; line-height: 1; }
+    .logo-blue { color: #0d6efd; } /* The exact blue from the app */
+
     .nav-right { display: flex; align-items: center; gap: 20px; }
     .nav-links { display: flex; gap: 20px; align-items: center; }
     .nav-links a { color: var(--text-main); text-decoration: none; font-weight: 600; font-size: 14px; text-transform: uppercase; letter-spacing: 1px; transition: color 0.2s; }
@@ -144,8 +158,8 @@
 
   <nav>
     
-    <a href="#" class="logo">
-      <img src="logo.svg" alt="SEND IT IN" style="height: 65px; border-radius: 8px; margin-top: -10px; border: 1px solid rgba(255, 255, 255, 0.15); box-shadow: 0 0 15px rgba(0, 240, 255, 0.8);">
+    <a href="#" class="logo-badge">
+      <div class="logo-text">SEND<span class="logo-blue">IT</span>IN</div>
     </a>
     
     <div class="nav-right">
